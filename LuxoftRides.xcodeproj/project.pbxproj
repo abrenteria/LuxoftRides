@@ -1,0 +1,547 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86D669551E96E35B0050AD84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669541E96E35B0050AD84 /* AppDelegate.swift */; };
+		86D669571E96E35B0050AD84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669561E96E35B0050AD84 /* ViewController.swift */; };
+		86D6695A1E96E35B0050AD84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D669581E96E35B0050AD84 /* Main.storyboard */; };
+		86D6695D1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86D6695B1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld */; };
+		86D6695F1E96E35B0050AD84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D6695E1E96E35B0050AD84 /* Assets.xcassets */; };
+		86D669621E96E35B0050AD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */; };
+		86D6696D1E96E35B0050AD84 /* LuxoftRidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6696C1E96E35B0050AD84 /* LuxoftRidesTests.swift */; };
+		86D669781E96E35B0050AD84 /* LuxoftRidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86D669691E96E35B0050AD84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D669491E96E35B0050AD84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86D669501E96E35B0050AD84;
+			remoteInfo = LuxoftRides;
+		};
+		86D669741E96E35B0050AD84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D669491E96E35B0050AD84 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86D669501E96E35B0050AD84;
+			remoteInfo = LuxoftRides;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86D669511E96E35B0050AD84 /* LuxoftRides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxoftRides.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D669541E96E35B0050AD84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		86D669561E96E35B0050AD84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		86D669591E96E35B0050AD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86D6695C1E96E35B0050AD84 /* LuxoftRides.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LuxoftRides.xcdatamodel; sourceTree = "<group>"; };
+		86D6695E1E96E35B0050AD84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		86D669611E96E35B0050AD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		86D669631E96E35B0050AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86D669681E96E35B0050AD84 /* LuxoftRidesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuxoftRidesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D6696C1E96E35B0050AD84 /* LuxoftRidesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxoftRidesTests.swift; sourceTree = "<group>"; };
+		86D6696E1E96E35B0050AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86D669731E96E35B0050AD84 /* LuxoftRidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuxoftRidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxoftRidesUITests.swift; sourceTree = "<group>"; };
+		86D669791E96E35B0050AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86D6694E1E96E35B0050AD84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D669651E96E35B0050AD84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D669701E96E35B0050AD84 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86D669481E96E35B0050AD84 = {
+			isa = PBXGroup;
+			children = (
+				86D669531E96E35B0050AD84 /* LuxoftRides */,
+				86D6696B1E96E35B0050AD84 /* LuxoftRidesTests */,
+				86D669761E96E35B0050AD84 /* LuxoftRidesUITests */,
+				86D669521E96E35B0050AD84 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86D669521E96E35B0050AD84 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86D669511E96E35B0050AD84 /* LuxoftRides.app */,
+				86D669681E96E35B0050AD84 /* LuxoftRidesTests.xctest */,
+				86D669731E96E35B0050AD84 /* LuxoftRidesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86D669531E96E35B0050AD84 /* LuxoftRides */ = {
+			isa = PBXGroup;
+			children = (
+				86D669541E96E35B0050AD84 /* AppDelegate.swift */,
+				86D669561E96E35B0050AD84 /* ViewController.swift */,
+				86D669581E96E35B0050AD84 /* Main.storyboard */,
+				86D6695E1E96E35B0050AD84 /* Assets.xcassets */,
+				86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */,
+				86D669631E96E35B0050AD84 /* Info.plist */,
+				86D6695B1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld */,
+			);
+			path = LuxoftRides;
+			sourceTree = "<group>";
+		};
+		86D6696B1E96E35B0050AD84 /* LuxoftRidesTests */ = {
+			isa = PBXGroup;
+			children = (
+				86D6696C1E96E35B0050AD84 /* LuxoftRidesTests.swift */,
+				86D6696E1E96E35B0050AD84 /* Info.plist */,
+			);
+			path = LuxoftRidesTests;
+			sourceTree = "<group>";
+		};
+		86D669761E96E35B0050AD84 /* LuxoftRidesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */,
+				86D669791E96E35B0050AD84 /* Info.plist */,
+			);
+			path = LuxoftRidesUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86D669501E96E35B0050AD84 /* LuxoftRides */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86D6697C1E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRides" */;
+			buildPhases = (
+				86D6694D1E96E35B0050AD84 /* Sources */,
+				86D6694E1E96E35B0050AD84 /* Frameworks */,
+				86D6694F1E96E35B0050AD84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LuxoftRides;
+			productName = LuxoftRides;
+			productReference = 86D669511E96E35B0050AD84 /* LuxoftRides.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86D669671E96E35B0050AD84 /* LuxoftRidesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86D6697F1E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRidesTests" */;
+			buildPhases = (
+				86D669641E96E35B0050AD84 /* Sources */,
+				86D669651E96E35B0050AD84 /* Frameworks */,
+				86D669661E96E35B0050AD84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86D6696A1E96E35B0050AD84 /* PBXTargetDependency */,
+			);
+			name = LuxoftRidesTests;
+			productName = LuxoftRidesTests;
+			productReference = 86D669681E96E35B0050AD84 /* LuxoftRidesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		86D669721E96E35B0050AD84 /* LuxoftRidesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86D669821E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRidesUITests" */;
+			buildPhases = (
+				86D6696F1E96E35B0050AD84 /* Sources */,
+				86D669701E96E35B0050AD84 /* Frameworks */,
+				86D669711E96E35B0050AD84 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86D669751E96E35B0050AD84 /* PBXTargetDependency */,
+			);
+			name = LuxoftRidesUITests;
+			productName = LuxoftRidesUITests;
+			productReference = 86D669731E96E35B0050AD84 /* LuxoftRidesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86D669491E96E35B0050AD84 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Jesus De Meyer";
+				TargetAttributes = {
+					86D669501E96E35B0050AD84 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					86D669671E96E35B0050AD84 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 86D669501E96E35B0050AD84;
+					};
+					86D669721E96E35B0050AD84 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 86D669501E96E35B0050AD84;
+					};
+				};
+			};
+			buildConfigurationList = 86D6694C1E96E35B0050AD84 /* Build configuration list for PBXProject "LuxoftRides" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86D669481E96E35B0050AD84;
+			productRefGroup = 86D669521E96E35B0050AD84 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86D669501E96E35B0050AD84 /* LuxoftRides */,
+				86D669671E96E35B0050AD84 /* LuxoftRidesTests */,
+				86D669721E96E35B0050AD84 /* LuxoftRidesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86D6694F1E96E35B0050AD84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D669621E96E35B0050AD84 /* LaunchScreen.storyboard in Resources */,
+				86D6695F1E96E35B0050AD84 /* Assets.xcassets in Resources */,
+				86D6695A1E96E35B0050AD84 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D669661E96E35B0050AD84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D669711E96E35B0050AD84 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86D6694D1E96E35B0050AD84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D669571E96E35B0050AD84 /* ViewController.swift in Sources */,
+				86D6695D1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld in Sources */,
+				86D669551E96E35B0050AD84 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D669641E96E35B0050AD84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D6696D1E96E35B0050AD84 /* LuxoftRidesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D6696F1E96E35B0050AD84 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D669781E96E35B0050AD84 /* LuxoftRidesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86D6696A1E96E35B0050AD84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86D669501E96E35B0050AD84 /* LuxoftRides */;
+			targetProxy = 86D669691E96E35B0050AD84 /* PBXContainerItemProxy */;
+		};
+		86D669751E96E35B0050AD84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86D669501E96E35B0050AD84 /* LuxoftRides */;
+			targetProxy = 86D669741E96E35B0050AD84 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86D669581E96E35B0050AD84 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86D669591E96E35B0050AD84 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86D669611E96E35B0050AD84 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86D6697A1E96E35B0050AD84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86D6697B1E96E35B0050AD84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86D6697D1E96E35B0050AD84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LuxoftRides/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxoft.LuxoftRides;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		86D6697E1E96E35B0050AD84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = LuxoftRides/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxoft.LuxoftRides;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		86D669801E96E35B0050AD84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LuxoftRidesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxoft.LuxoftRidesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuxoftRides.app/LuxoftRides";
+			};
+			name = Debug;
+		};
+		86D669811E96E35B0050AD84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = LuxoftRidesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxoft.LuxoftRidesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LuxoftRides.app/LuxoftRides";
+			};
+			name = Release;
+		};
+		86D669831E96E35B0050AD84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LuxoftRidesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxoft.LuxoftRidesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LuxoftRides;
+			};
+			name = Debug;
+		};
+		86D669841E96E35B0050AD84 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = LuxoftRidesUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.luxoft.LuxoftRidesUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = LuxoftRides;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86D6694C1E96E35B0050AD84 /* Build configuration list for PBXProject "LuxoftRides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D6697A1E96E35B0050AD84 /* Debug */,
+				86D6697B1E96E35B0050AD84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86D6697C1E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRides" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D6697D1E96E35B0050AD84 /* Debug */,
+				86D6697E1E96E35B0050AD84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		86D6697F1E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRidesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D669801E96E35B0050AD84 /* Debug */,
+				86D669811E96E35B0050AD84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		86D669821E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRidesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D669831E96E35B0050AD84 /* Debug */,
+				86D669841E96E35B0050AD84 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		86D6695B1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				86D6695C1E96E35B0050AD84 /* LuxoftRides.xcdatamodel */,
+			);
+			currentVersion = 86D6695C1E96E35B0050AD84 /* LuxoftRides.xcdatamodel */;
+			path = LuxoftRides.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 86D669491E96E35B0050AD84 /* Project object */;
+}
