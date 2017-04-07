@@ -15,6 +15,11 @@
 		86D669621E96E35B0050AD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */; };
 		86D6696D1E96E35B0050AD84 /* LuxoftRidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6696C1E96E35B0050AD84 /* LuxoftRidesTests.swift */; };
 		86D669781E96E35B0050AD84 /* LuxoftRidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */; };
+		86D669861E97DEED0050AD84 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669851E97DEED0050AD84 /* DataManager.swift */; };
+		86D6698D1E97ED280050AD84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6698C1E97ED280050AD84 /* User.swift */; };
+		86D6698F1E97ED640050AD84 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6698E1E97ED640050AD84 /* Ride.swift */; };
+		86D669911E97ED6B0050AD84 /* UserRides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669901E97ED6B0050AD84 /* UserRides.swift */; };
+		86D669931E97F0930050AD84 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669921E97F0930050AD84 /* LoginManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		86D669731E96E35B0050AD84 /* LuxoftRidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuxoftRidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxoftRidesUITests.swift; sourceTree = "<group>"; };
 		86D669791E96E35B0050AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86D669851E97DEED0050AD84 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		86D6698C1E97ED280050AD84 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		86D6698E1E97ED640050AD84 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
+		86D669901E97ED6B0050AD84 /* UserRides.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRides.swift; sourceTree = "<group>"; };
+		86D669921E97F0930050AD84 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +110,14 @@
 			isa = PBXGroup;
 			children = (
 				86D669541E96E35B0050AD84 /* AppDelegate.swift */,
+				86D669851E97DEED0050AD84 /* DataManager.swift */,
+				86D669921E97F0930050AD84 /* LoginManager.swift */,
 				86D669561E96E35B0050AD84 /* ViewController.swift */,
 				86D669581E96E35B0050AD84 /* Main.storyboard */,
 				86D6695E1E96E35B0050AD84 /* Assets.xcassets */,
 				86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */,
 				86D669631E96E35B0050AD84 /* Info.plist */,
+				86D6698B1E97ED280050AD84 /* Models */,
 				86D6695B1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld */,
 			);
 			path = LuxoftRides;
@@ -126,6 +139,16 @@
 				86D669791E96E35B0050AD84 /* Info.plist */,
 			);
 			path = LuxoftRidesUITests;
+			sourceTree = "<group>";
+		};
+		86D6698B1E97ED280050AD84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86D6698C1E97ED280050AD84 /* User.swift */,
+				86D6698E1E97ED640050AD84 /* Ride.swift */,
+				86D669901E97ED6B0050AD84 /* UserRides.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,9 +285,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				86D6698D1E97ED280050AD84 /* User.swift in Sources */,
+				86D669931E97F0930050AD84 /* LoginManager.swift in Sources */,
 				86D669571E96E35B0050AD84 /* ViewController.swift in Sources */,
+				86D669861E97DEED0050AD84 /* DataManager.swift in Sources */,
 				86D6695D1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld in Sources */,
 				86D669551E96E35B0050AD84 /* AppDelegate.swift in Sources */,
+				86D6698F1E97ED640050AD84 /* Ride.swift in Sources */,
+				86D669911E97ED6B0050AD84 /* UserRides.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
