@@ -10,7 +10,6 @@
 		1E8F90F455C2159D48713773 /* Pods_LuxoftRidesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */; };
 		668DC91CC16BF86F487FD47E /* Pods_LuxoftRidesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48128FF065CCA6D6E21FCE58 /* Pods_LuxoftRidesTests.framework */; };
 		86D669551E96E35B0050AD84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669541E96E35B0050AD84 /* AppDelegate.swift */; };
-		86D669571E96E35B0050AD84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669561E96E35B0050AD84 /* ViewController.swift */; };
 		86D6695A1E96E35B0050AD84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D669581E96E35B0050AD84 /* Main.storyboard */; };
 		86D6695D1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 86D6695B1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld */; };
 		86D6695F1E96E35B0050AD84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D6695E1E96E35B0050AD84 /* Assets.xcassets */; };
@@ -18,6 +17,7 @@
 		86D6696D1E96E35B0050AD84 /* LuxoftRidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6696C1E96E35B0050AD84 /* LuxoftRidesTests.swift */; };
 		86D669781E96E35B0050AD84 /* LuxoftRidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */; };
 		ADC1078A0592DC461A56500A /* Pods_LuxoftRides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC272B603DF1AEDA9B2B19C /* Pods_LuxoftRides.framework */; };
+		C34413681E9744F9005833FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34413671E9744F9005833FE /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,6 @@
 		66A0529577638393609D4181 /* Pods-LuxoftRides.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRides.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRides/Pods-LuxoftRides.release.xcconfig"; sourceTree = "<group>"; };
 		86D669511E96E35B0050AD84 /* LuxoftRides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxoftRides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D669541E96E35B0050AD84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		86D669561E96E35B0050AD84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		86D669591E96E35B0050AD84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		86D6695C1E96E35B0050AD84 /* LuxoftRides.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LuxoftRides.xcdatamodel; sourceTree = "<group>"; };
 		86D6695E1E96E35B0050AD84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxoftRidesUITests.swift; sourceTree = "<group>"; };
 		86D669791E96E35B0050AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97235721A9502EDB79D4D8B5 /* Pods-LuxoftRidesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRidesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRidesUITests/Pods-LuxoftRidesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C34413671E9744F9005833FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuxoftRidesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,8 +129,8 @@
 		86D669531E96E35B0050AD84 /* LuxoftRides */ = {
 			isa = PBXGroup;
 			children = (
+				C34413661E9744C6005833FE /* View Controllers */,
 				86D669541E96E35B0050AD84 /* AppDelegate.swift */,
-				86D669561E96E35B0050AD84 /* ViewController.swift */,
 				86D669581E96E35B0050AD84 /* Main.storyboard */,
 				86D6695E1E96E35B0050AD84 /* Assets.xcassets */,
 				86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */,
@@ -166,6 +166,14 @@
 				C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C34413661E9744C6005833FE /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C34413671E9744F9005833FE /* LoginViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -449,7 +457,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D669571E96E35B0050AD84 /* ViewController.swift in Sources */,
+				C34413681E9744F9005833FE /* LoginViewController.swift in Sources */,
 				86D6695D1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld in Sources */,
 				86D669551E96E35B0050AD84 /* AppDelegate.swift in Sources */,
 			);
@@ -704,6 +712,7 @@
 				86D6697E1E96E35B0050AD84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86D6697F1E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRidesTests" */ = {
 			isa = XCConfigurationList;
@@ -712,6 +721,7 @@
 				86D669811E96E35B0050AD84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		86D669821E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRidesUITests" */ = {
 			isa = XCConfigurationList;
@@ -720,6 +730,7 @@
 				86D669841E96E35B0050AD84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
