@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var notRegisteredLabel: TTTAttributedLabel!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
 
     override func viewDidLoad() {
@@ -36,8 +38,22 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-        // TODO: Bind with taxxodium's code
+        guard let email = emailTextField.text, !email.isEmpty else {
+            self.showSimpleAlert(title: "Invalid Email", message: "Please make sure your email address is correct!")
+            return
+        }
+        
+        guard let password = passwordTextField.text, !password.isEmpty else {
+            self.showSimpleAlert(title: "Invalid Password", message: "Please make sure your password is correct and has at least 8 characters!")
+            return
+        }
+        
+        if LoginManager.shared.login(email: email, password: password) == false {
+            self.showSimpleAlert(title: "Could not login!", message: "Please make sure you have registered and that your email and password is correct!")
+        }
     }
+    
+    
     
     // Unwind segues
     
