@@ -9,6 +9,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+<<<<<<< HEAD
+        <!--Login View Controller-->
+=======
         <!--Initial View Controller-->
         <scene sceneID="icq-T9-h9r">
             <objects>
@@ -43,7 +46,8 @@
             </objects>
             <point key="canvasLocation" x="223" y="112"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Delegate-->
+>>>>>>> taxxodium/coredata
         <scene sceneID="32P-Fj-FOT">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="ygJ-J6-Cc8" userLabel="Login View Controller" customClass="LoginViewController" customModule="LuxoftRides" customModuleProvider="target" sceneMemberID="viewController">
@@ -365,9 +369,8 @@
         <!--Navigation Controller-->
         <scene sceneID="Tdi-V9-o5l">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="JlI-Ub-IzR" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JlI-Ub-IzR" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <nil key="simulatedTopBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="wH9-5j-xUy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

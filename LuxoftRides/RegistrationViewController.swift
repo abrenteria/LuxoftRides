@@ -57,6 +57,7 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
+        // TODO: Perform registration on Core Data
     }
 
 }
@@ -64,7 +65,31 @@ class RegistrationViewController: UIViewController {
 extension RegistrationViewController: TTTAttributedLabelDelegate {
     
     func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
-        print("image")
+        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum;
+            imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
     
 }
+
+extension RegistrationViewController: UIImagePickerControllerDelegate {
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        userImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+    }
+    
+}
+
+extension RegistrationViewController: UINavigationControllerDelegate { }
+
+
+
+
+
+
+
