@@ -28,6 +28,7 @@
 		ADC1078A0592DC461A56500A /* Pods_LuxoftRides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC272B603DF1AEDA9B2B19C /* Pods_LuxoftRides.framework */; };
 		C34413681E9744F9005833FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34413671E9744F9005833FE /* LoginViewController.swift */; };
 		C36204BB1E97F2E9004E10F8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */; };
+		C37AF7C81E981CD300838CE7 /* OfferRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37AF7C71E981CD300838CE7 /* OfferRideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		97235721A9502EDB79D4D8B5 /* Pods-LuxoftRidesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRidesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRidesUITests/Pods-LuxoftRidesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C34413671E9744F9005833FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		C37AF7C71E981CD300838CE7 /* OfferRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferRideViewController.swift; sourceTree = "<group>"; };
 		C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuxoftRidesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -218,6 +220,7 @@
 				86D669971E9800920050AD84 /* InitialViewController.swift */,
 				C34413671E9744F9005833FE /* LoginViewController.swift */,
 				C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */,
+				C37AF7C71E981CD300838CE7 /* OfferRideViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -512,6 +515,7 @@
 				86D669961E97FC100050AD84 /* UIViewController+LX.swift in Sources */,
 				C36204BB1E97F2E9004E10F8 /* RegistrationViewController.swift in Sources */,
 				86D669551E96E35B0050AD84 /* AppDelegate.swift in Sources */,
+				C37AF7C81E981CD300838CE7 /* OfferRideViewController.swift in Sources */,
 				86D6698F1E97ED640050AD84 /* Ride.swift in Sources */,
 				86D669911E97ED6B0050AD84 /* UserRides.swift in Sources */,
 			);
