@@ -10,11 +10,13 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-    func showSimpleAlert(title: String, message: String) {
+    func showSimpleAlert(title: String, message: String, completion: (()->Void)? = nil) {
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
         alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         
-        self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: { (_) in
+            completion?()
+        })
     }
 }

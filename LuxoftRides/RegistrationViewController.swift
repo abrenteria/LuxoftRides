@@ -25,6 +25,8 @@ class RegistrationViewController: UIViewController {
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var selectImageLabel: TTTAttributedLabel!
     
+    fileprivate var userImage: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,7 +59,31 @@ class RegistrationViewController: UIViewController {
     }
     
     @IBAction func submitButtonTapped(_ sender: UIButton) {
-        // TODO: Perform registration on Core Data
+        guard let name = self.nameTextField.text, let lastname = self.lastNameTextField.text, let email = self.emailTextField.text, let password = self.passwordTextField.text, let password_confirmation = self.passwordTextField2.text, !name.isEmpty && !lastname.isEmpty && !email.isEmpty && !password.isEmpty && !password_confirmation.isEmpty else {
+            self.showSimpleAlert(title: "Invalid values for fields!", message: "Make sure all fields are filled in!")
+            return
+        }
+        
+        if password != password_confirmation {
+            self.showSimpleAlert(title: "Passwords don't match!", message: "Please make sure both password fields are the same.")
+            return
+        }
+        
+        if let image = self.userImage, let imageData = UIImagePNGRepresentation(image) {
+            let newUser = LoginManager.shared.register(name: name, lastname: lastname, email: email, password: password)
+            newUser.avatarData = imageData as NSData
+            
+            if LoginManager.shared.login(email: email, password: password) {
+                let controller = AppDelegate.storyboard.instantiateViewController(withIdentifier: "MainViewController")
+                self.navigationController?.pushViewController(controller, animated: true)
+            } else {
+                self.showSimpleAlert(title: "Could not login", message: "Please try again later.") {
+                    _ = self.navigationController?.popViewController(animated: true)
+                }
+            }
+        } else {
+            self.showSimpleAlert(title: "No Image Selected", message: "You must select an image before registering.")
+        }
     }
 
 }
@@ -80,7 +106,9 @@ extension RegistrationViewController: UIImagePickerControllerDelegate {
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         picker.dismiss(animated: true, completion: nil)
-        userImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        userImage = info[UIImagePickerControllerOriginalImage] as? UIImage
+        userImageView.image = userImage
+        
     }
     
 }

@@ -38,18 +38,21 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: UIButton) {
-        guard let email = emailTextField.text, !email.isEmpty else {
+        guard let email = emailTextField.text, !email.isEmpty && User.validateEmail(email) else {
             self.showSimpleAlert(title: "Invalid Email", message: "Please make sure your email address is correct!")
             return
         }
         
-        guard let password = passwordTextField.text, !password.isEmpty else {
+        guard let password = passwordTextField.text, !password.isEmpty && User.validatePassword(password) else {
             self.showSimpleAlert(title: "Invalid Password", message: "Please make sure your password is correct and has at least 8 characters!")
             return
         }
         
         if LoginManager.shared.login(email: email, password: password) == false {
             self.showSimpleAlert(title: "Could not login!", message: "Please make sure you have registered and that your email and password is correct!")
+        } else {
+            let controller = AppDelegate.storyboard.instantiateViewController(withIdentifier: "MainViewController")
+            self.navigationController?.pushViewController(controller, animated: true)
         }
     }
     

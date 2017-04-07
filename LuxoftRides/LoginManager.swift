@@ -19,7 +19,7 @@ class LoginManager {
             
             fetchRequest.predicate = predicate
             
-            if let users = try? fetchRequest.execute() {
+            if let users = try? DataManager.shared.managedObjectContext.fetch(fetchRequest) {
                 return users.last!
             }
         }
@@ -28,33 +28,30 @@ class LoginManager {
     }
     
     func login(email: String, password: String) -> Bool {
-        guard let currentUser = User.current else {
+        guard let currentUser = self.findUser(email: email, password: password) else {
             return false
         }
         
-        let success = currentUser.email == email && currentUser.password == password
+        currentUser.isLoggedIn = true
         
-        if success {
-            currentUser.isLoggedIn = true
-            
-            UserDefaults.standard.set(currentUser.identifier ?? "", forKey: "user")
-        }
+        UserDefaults.standard.set(currentUser.identifier ?? "", forKey: "user")
         
-        return success
+        return true
     }
     
     func logout() {
-        guard let currentUser = User.current, currentUser.isLoggedIn == true else {
+        guard let currentUser = self.findCurrentUser(), currentUser.isLoggedIn == true else {
             return
         }
         
         currentUser.isLoggedIn = false
+        
         UserDefaults.standard.removeObject(forKey: "user")
     }
     
     // MARK: -
     
-    func register(name: String, lastname: String, email: String, password: String) {
+    func register(name: String, lastname: String, email: String, password: String) -> User {
         let identifier = UUID().uuidString
         
         let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: DataManager.shared.managedObjectContext) as! User
@@ -66,6 +63,40 @@ class LoginManager {
         newUser.password = password
         
         DataManager.shared.save()
+        
+        return newUser
+    }
+    
+    // MARK: -
+    
+    fileprivate func findUser(email: String, password: String) -> User? {
+        let fetchRequest = NSFetchRequest<User>(entityName: "User")
+        let predicate = NSPredicate(format: "email == %@ && password == %@", argumentArray: [email, password])
+        
+        fetchRequest.predicate = predicate
+        
+        if let users = try? DataManager.shared.managedObjectContext.fetch(fetchRequest) {
+            return users.last!
+        }
+        
+        return nil
+    }
+    
+    fileprivate func findCurrentUser() -> User? {
+        guard let identifier = UserDefaults.standard.value(forKey: "user") else {
+            return nil
+        }
+        
+        let fetchRequest = NSFetchRequest<User>(entityName: "User")
+        let predicate = NSPredicate(format: "identifier == %@", argumentArray: [identifier])
+        
+        fetchRequest.predicate = predicate
+        
+        if let users = try? DataManager.shared.managedObjectContext.fetch(fetchRequest) {
+            return users.last!
+        }
+        
+        return nil
     }
     
     
