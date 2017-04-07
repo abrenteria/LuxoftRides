@@ -8,7 +8,15 @@
 
 import Foundation
 import CoreData
+import CoreLocation
 
 class Ride: NSManagedObject {
+    var sourceCoordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(self.sourceLatitude, self.sourceLongitude)
+    }
+    
+    var destinationCoordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2DMake(self.destinationLatitude, self.destinationLongitude)
+    }
     
 }

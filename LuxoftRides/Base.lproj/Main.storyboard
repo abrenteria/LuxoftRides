@@ -36,7 +36,7 @@
                     <connections>
                         <outlet property="indicatorView" destination="sue-Nk-gih" id="qR7-Tq-lla"/>
                         <segue destination="ygJ-J6-Cc8" kind="show" identifier="showLogin" id="cDh-EC-Umb"/>
-                        <segue destination="qBa-hC-aBf" kind="presentation" identifier="showMain" id="Kn3-as-6T0"/>
+                        <segue destination="qBa-hC-aBf" kind="show" identifier="showMain" id="Kn3-as-6T0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGt-uv-k7W" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,7 +347,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="GzC-Fp-v1o">
             <objects>
-                <tabBarController id="qBa-hC-aBf" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainViewController" id="qBa-hC-aBf" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="Qbt-eb-eTL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
