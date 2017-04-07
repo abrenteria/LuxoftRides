@@ -33,8 +33,4 @@ class LuxoftRidesTests: XCTestCase {
         }
     }
     
-    func testLoginWithInvalidUser() {
-        
-    }
-    
 }
