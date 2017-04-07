@@ -75,7 +75,7 @@ class LoginManager {
         
         fetchRequest.predicate = predicate
         
-        if let users = try? DataManager.shared.managedObjectContext.fetch(fetchRequest) {
+        if let users = try? DataManager.shared.managedObjectContext.fetch(fetchRequest), users.count > 0 {
             return users.last!
         }
         
@@ -92,7 +92,7 @@ class LoginManager {
         
         fetchRequest.predicate = predicate
         
-        if let users = try? DataManager.shared.managedObjectContext.fetch(fetchRequest) {
+        if let users = try? DataManager.shared.managedObjectContext.fetch(fetchRequest), users.count > 0 {
             return users.last!
         }
         
