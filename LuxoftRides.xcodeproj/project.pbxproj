@@ -16,14 +16,16 @@
 		86D669621E96E35B0050AD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */; };
 		86D6696D1E96E35B0050AD84 /* LuxoftRidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6696C1E96E35B0050AD84 /* LuxoftRidesTests.swift */; };
 		86D669781E96E35B0050AD84 /* LuxoftRidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */; };
-		ADC1078A0592DC461A56500A /* Pods_LuxoftRides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC272B603DF1AEDA9B2B19C /* Pods_LuxoftRides.framework */; };
-		C34413681E9744F9005833FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34413671E9744F9005833FE /* LoginViewController.swift */; };
-		C36204BB1E97F2E9004E10F8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */; };
 		86D669861E97DEED0050AD84 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669851E97DEED0050AD84 /* DataManager.swift */; };
 		86D6698D1E97ED280050AD84 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6698C1E97ED280050AD84 /* User.swift */; };
 		86D6698F1E97ED640050AD84 /* Ride.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6698E1E97ED640050AD84 /* Ride.swift */; };
 		86D669911E97ED6B0050AD84 /* UserRides.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669901E97ED6B0050AD84 /* UserRides.swift */; };
 		86D669931E97F0930050AD84 /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669921E97F0930050AD84 /* LoginManager.swift */; };
+		86D669961E97FC100050AD84 /* UIViewController+LX.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669951E97FC100050AD84 /* UIViewController+LX.swift */; };
+		86D669981E9800920050AD84 /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669971E9800920050AD84 /* InitialViewController.swift */; };
+		ADC1078A0592DC461A56500A /* Pods_LuxoftRides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC272B603DF1AEDA9B2B19C /* Pods_LuxoftRides.framework */; };
+		C34413681E9744F9005833FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34413671E9744F9005833FE /* LoginViewController.swift */; };
+		C36204BB1E97F2E9004E10F8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,15 +66,17 @@
 		86D669731E96E35B0050AD84 /* LuxoftRidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuxoftRidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxoftRidesUITests.swift; sourceTree = "<group>"; };
 		86D669791E96E35B0050AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		97235721A9502EDB79D4D8B5 /* Pods-LuxoftRidesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRidesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRidesUITests/Pods-LuxoftRidesUITests.release.xcconfig"; sourceTree = "<group>"; };
-		C34413671E9744F9005833FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
-		C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuxoftRidesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D669851E97DEED0050AD84 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		86D6698C1E97ED280050AD84 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		86D6698E1E97ED640050AD84 /* Ride.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ride.swift; sourceTree = "<group>"; };
 		86D669901E97ED6B0050AD84 /* UserRides.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRides.swift; sourceTree = "<group>"; };
 		86D669921E97F0930050AD84 /* LoginManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
+		86D669951E97FC100050AD84 /* UIViewController+LX.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+LX.swift"; sourceTree = "<group>"; };
+		86D669971E9800920050AD84 /* InitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
+		97235721A9502EDB79D4D8B5 /* Pods-LuxoftRidesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRidesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRidesUITests/Pods-LuxoftRidesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C34413671E9744F9005833FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuxoftRidesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +145,9 @@
 		86D669531E96E35B0050AD84 /* LuxoftRides */ = {
 			isa = PBXGroup;
 			children = (
-				C34413661E9744C6005833FE /* View Controllers */,
 				86D669541E96E35B0050AD84 /* AppDelegate.swift */,
-				86D669851E97DEED0050AD84 /* DataManager.swift */,
-				86D669921E97F0930050AD84 /* LoginManager.swift */,
-				86D669561E96E35B0050AD84 /* ViewController.swift */,
+				86D669941E97FA290050AD84 /* Managers */,
+				C34413661E9744C6005833FE /* View Controllers */,
 				86D669581E96E35B0050AD84 /* Main.storyboard */,
 				86D6695E1E96E35B0050AD84 /* Assets.xcassets */,
 				86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */,
@@ -174,6 +176,25 @@
 			path = LuxoftRidesUITests;
 			sourceTree = "<group>";
 		};
+		86D6698B1E97ED280050AD84 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				86D6698C1E97ED280050AD84 /* User.swift */,
+				86D6698E1E97ED640050AD84 /* Ride.swift */,
+				86D669901E97ED6B0050AD84 /* UserRides.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		86D669941E97FA290050AD84 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				86D669851E97DEED0050AD84 /* DataManager.swift */,
+				86D669921E97F0930050AD84 /* LoginManager.swift */,
+			);
+			name = Managers;
+			sourceTree = "<group>";
+		};
 		AF430B876BD07E1FEF20657E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,20 +208,12 @@
 		C34413661E9744C6005833FE /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				86D669951E97FC100050AD84 /* UIViewController+LX.swift */,
+				86D669971E9800920050AD84 /* InitialViewController.swift */,
 				C34413671E9744F9005833FE /* LoginViewController.swift */,
 				C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */,
 			);
 			name = "View Controllers";
-			sourceTree = "<group>";
-		};
-		86D6698B1E97ED280050AD84 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				86D6698C1E97ED280050AD84 /* User.swift */,
-				86D6698E1E97ED640050AD84 /* Ride.swift */,
-				86D669901E97ED6B0050AD84 /* UserRides.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -486,10 +499,11 @@
 			files = (
 				C34413681E9744F9005833FE /* LoginViewController.swift in Sources */,
 				86D6698D1E97ED280050AD84 /* User.swift in Sources */,
+				86D669981E9800920050AD84 /* InitialViewController.swift in Sources */,
 				86D669931E97F0930050AD84 /* LoginManager.swift in Sources */,
-				86D669571E96E35B0050AD84 /* ViewController.swift in Sources */,
 				86D669861E97DEED0050AD84 /* DataManager.swift in Sources */,
 				86D6695D1E96E35B0050AD84 /* LuxoftRides.xcdatamodeld in Sources */,
+				86D669961E97FC100050AD84 /* UIViewController+LX.swift in Sources */,
 				C36204BB1E97F2E9004E10F8 /* RegistrationViewController.swift in Sources */,
 				86D669551E96E35B0050AD84 /* AppDelegate.swift in Sources */,
 				86D6698F1E97ED640050AD84 /* Ride.swift in Sources */,
