@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E8F90F455C2159D48713773 /* Pods_LuxoftRidesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */; };
+		668DC91CC16BF86F487FD47E /* Pods_LuxoftRidesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48128FF065CCA6D6E21FCE58 /* Pods_LuxoftRidesTests.framework */; };
 		86D669551E96E35B0050AD84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669541E96E35B0050AD84 /* AppDelegate.swift */; };
 		86D669571E96E35B0050AD84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669561E96E35B0050AD84 /* ViewController.swift */; };
 		86D6695A1E96E35B0050AD84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D669581E96E35B0050AD84 /* Main.storyboard */; };
@@ -15,6 +17,7 @@
 		86D669621E96E35B0050AD84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86D669601E96E35B0050AD84 /* LaunchScreen.storyboard */; };
 		86D6696D1E96E35B0050AD84 /* LuxoftRidesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D6696C1E96E35B0050AD84 /* LuxoftRidesTests.swift */; };
 		86D669781E96E35B0050AD84 /* LuxoftRidesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */; };
+		ADC1078A0592DC461A56500A /* Pods_LuxoftRides.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CC272B603DF1AEDA9B2B19C /* Pods_LuxoftRides.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D9A1D64DAE9580F0F0C1C24 /* Pods-LuxoftRidesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRidesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRidesTests/Pods-LuxoftRidesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1608073C52C7D23B684917F1 /* Pods-LuxoftRidesUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRidesUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRidesUITests/Pods-LuxoftRidesUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		176B5733065BD68564986AAD /* Pods-LuxoftRides.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRides.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRides/Pods-LuxoftRides.debug.xcconfig"; sourceTree = "<group>"; };
+		27C291FB0E348A9CFD52FCC9 /* Pods-LuxoftRidesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRidesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRidesTests/Pods-LuxoftRidesTests.release.xcconfig"; sourceTree = "<group>"; };
+		48128FF065CCA6D6E21FCE58 /* Pods_LuxoftRidesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuxoftRidesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC272B603DF1AEDA9B2B19C /* Pods_LuxoftRides.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuxoftRides.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66A0529577638393609D4181 /* Pods-LuxoftRides.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRides.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRides/Pods-LuxoftRides.release.xcconfig"; sourceTree = "<group>"; };
 		86D669511E96E35B0050AD84 /* LuxoftRides.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LuxoftRides.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D669541E96E35B0050AD84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D669561E96E35B0050AD84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +59,8 @@
 		86D669731E96E35B0050AD84 /* LuxoftRidesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LuxoftRidesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D669771E96E35B0050AD84 /* LuxoftRidesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuxoftRidesUITests.swift; sourceTree = "<group>"; };
 		86D669791E96E35B0050AD84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97235721A9502EDB79D4D8B5 /* Pods-LuxoftRidesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LuxoftRidesUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LuxoftRidesUITests/Pods-LuxoftRidesUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuxoftRidesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC1078A0592DC461A56500A /* Pods_LuxoftRides.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668DC91CC16BF86F487FD47E /* Pods_LuxoftRidesTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E8F90F455C2159D48713773 /* Pods_LuxoftRidesUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37348F5B6CE74F053B53AC64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				176B5733065BD68564986AAD /* Pods-LuxoftRides.debug.xcconfig */,
+				66A0529577638393609D4181 /* Pods-LuxoftRides.release.xcconfig */,
+				0D9A1D64DAE9580F0F0C1C24 /* Pods-LuxoftRidesTests.debug.xcconfig */,
+				27C291FB0E348A9CFD52FCC9 /* Pods-LuxoftRidesTests.release.xcconfig */,
+				1608073C52C7D23B684917F1 /* Pods-LuxoftRidesUITests.debug.xcconfig */,
+				97235721A9502EDB79D4D8B5 /* Pods-LuxoftRidesUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		86D669481E96E35B0050AD84 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +111,8 @@
 				86D6696B1E96E35B0050AD84 /* LuxoftRidesTests */,
 				86D669761E96E35B0050AD84 /* LuxoftRidesUITests */,
 				86D669521E96E35B0050AD84 /* Products */,
+				37348F5B6CE74F053B53AC64 /* Pods */,
+				AF430B876BD07E1FEF20657E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +158,16 @@
 			path = LuxoftRidesUITests;
 			sourceTree = "<group>";
 		};
+		AF430B876BD07E1FEF20657E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5CC272B603DF1AEDA9B2B19C /* Pods_LuxoftRides.framework */,
+				48128FF065CCA6D6E21FCE58 /* Pods_LuxoftRidesTests.framework */,
+				C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +175,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D6697C1E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRides" */;
 			buildPhases = (
+				96EA37B79286E00463F36607 /* [CP] Check Pods Manifest.lock */,
 				86D6694D1E96E35B0050AD84 /* Sources */,
 				86D6694E1E96E35B0050AD84 /* Frameworks */,
 				86D6694F1E96E35B0050AD84 /* Resources */,
+				792CDE7F7E413B0AD008B341 /* [CP] Embed Pods Frameworks */,
+				F57D0C018635EDF2289D75D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +195,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D6697F1E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRidesTests" */;
 			buildPhases = (
+				BC7DED27877ACB2A07D5FDC8 /* [CP] Check Pods Manifest.lock */,
 				86D669641E96E35B0050AD84 /* Sources */,
 				86D669651E96E35B0050AD84 /* Frameworks */,
 				86D669661E96E35B0050AD84 /* Resources */,
+				EAB3EC6A3BE65D93AC2F9056 /* [CP] Embed Pods Frameworks */,
+				BA7F703F64CF957744A1934C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +216,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D669821E96E35B0050AD84 /* Build configuration list for PBXNativeTarget "LuxoftRidesUITests" */;
 			buildPhases = (
+				B7A8B47819085A3BFE3CF753 /* [CP] Check Pods Manifest.lock */,
 				86D6696F1E96E35B0050AD84 /* Sources */,
 				86D669701E96E35B0050AD84 /* Frameworks */,
 				86D669711E96E35B0050AD84 /* Resources */,
+				203EF6BF6F1F8C180F517309 /* [CP] Embed Pods Frameworks */,
+				A15A806F2FBD953103E1B381 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -256,6 +305,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		203EF6BF6F1F8C180F517309 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuxoftRidesUITests/Pods-LuxoftRidesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		792CDE7F7E413B0AD008B341 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuxoftRides/Pods-LuxoftRides-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96EA37B79286E00463F36607 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A15A806F2FBD953103E1B381 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuxoftRidesUITests/Pods-LuxoftRidesUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7A8B47819085A3BFE3CF753 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BA7F703F64CF957744A1934C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuxoftRidesTests/Pods-LuxoftRidesTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC7DED27877ACB2A07D5FDC8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EAB3EC6A3BE65D93AC2F9056 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuxoftRidesTests/Pods-LuxoftRidesTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F57D0C018635EDF2289D75D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LuxoftRides/Pods-LuxoftRides-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86D6694D1E96E35B0050AD84 /* Sources */ = {
@@ -416,6 +603,7 @@
 		};
 		86D6697D1E96E35B0050AD84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 176B5733065BD68564986AAD /* Pods-LuxoftRides.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LuxoftRides/Info.plist;
@@ -428,6 +616,7 @@
 		};
 		86D6697E1E96E35B0050AD84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66A0529577638393609D4181 /* Pods-LuxoftRides.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LuxoftRides/Info.plist;
@@ -440,6 +629,7 @@
 		};
 		86D669801E96E35B0050AD84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D9A1D64DAE9580F0F0C1C24 /* Pods-LuxoftRidesTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +644,7 @@
 		};
 		86D669811E96E35B0050AD84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27C291FB0E348A9CFD52FCC9 /* Pods-LuxoftRidesTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +659,7 @@
 		};
 		86D669831E96E35B0050AD84 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1608073C52C7D23B684917F1 /* Pods-LuxoftRidesUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LuxoftRidesUITests/Info.plist;
@@ -481,6 +673,7 @@
 		};
 		86D669841E96E35B0050AD84 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97235721A9502EDB79D4D8B5 /* Pods-LuxoftRidesUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = LuxoftRidesUITests/Info.plist;
