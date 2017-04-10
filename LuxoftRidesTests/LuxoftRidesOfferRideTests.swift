@@ -16,7 +16,12 @@ class LuxoftRidesOfferRideTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        offerRideUnderTest = OfferRideViewController()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        offerRideUnderTest = storyboard.instantiateViewController(withIdentifier: "OfferRideViewControllerId") as! OfferRideViewController
+        UIApplication.shared.keyWindow!.rootViewController = offerRideUnderTest
+        
+        // Test and Load the View at the Same Time!
+        XCTAssertNotNil(offerRideUnderTest.view)
     }
     
     override func tearDown() {
@@ -24,8 +29,32 @@ class LuxoftRidesOfferRideTests: XCTestCase {
         super.tearDown()
     }
     
-    func testOriginIsCorrect() {
+    func testSourceAddressIsValid() {
+        let promise = expectation(description: "Valid entry")
         
+        offerRideUnderTest.drawPin(at: "Mision san antonio 6144, zapopan 45030", type: .source) { (mark) in
+            if mark != nil {
+                promise.fulfill()
+            } else {
+                XCTFail("Invalid source address")
+            }
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
+    }
+    
+    func testDestinationAddressIsValid() {
+        let promise = expectation(description: "Valid entry")
+        
+        offerRideUnderTest.drawPin(at: "av de los empresarios 135 puerta de hierro 45116", type: .destination) { (mark) in
+            if mark != nil {
+                promise.fulfill()
+            } else {
+                XCTFail("Invalid destination address")
+            }
+        }
+        
+        waitForExpectations(timeout: 5, handler: nil)
     }
     
 }
