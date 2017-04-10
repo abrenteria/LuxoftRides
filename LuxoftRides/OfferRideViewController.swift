@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class OfferRideViewController: UIViewController {
     
@@ -25,23 +26,33 @@ class OfferRideViewController: UIViewController {
     
     fileprivate func drawPin(at address: String, completion: @escaping (MKPlacemark?) -> Void) {
         let geocoder = CLGeocoder()
-        geocoder.geocodeAddressString(address) { [weak self] placemarks, error in
+        
+        geocoder.geocodeAddressString(address) { (placemarks, error) in
             if let error = error {
                 print(error.localizedDescription)
                 completion(nil)
             } else {
-                if let placemark = placemarks?.first, let location = placemark.location {
-                    let mark = MKPlacemark(placemark: placemark)
-                    
-                    if var region = self?.mapView.region {
-                        region.center = location.coordinate
-                        region.span.longitudeDelta /= 8.0
-                        region.span.latitudeDelta /= 8.0
-                        self?.mapView.setRegion(region, animated: true)
-                        self?.mapView.addAnnotation(mark)
-                        completion(mark)
-                    }
+                guard let placemark = placemarks?.first else {
+                    completion(nil)
+                    return
                 }
+                
+                guard let location = placemark.location else {
+                    completion(nil)
+                    return
+                }
+                
+                var region = self.mapView.region
+                let mark = MKPlacemark(placemark: placemark)
+                
+                region.center = location.coordinate
+                region.span.longitudeDelta /= 8.0
+                region.span.latitudeDelta /= 8.0
+                
+                self.mapView.setRegion(region, animated: true)
+                self.mapView.addAnnotation(mark)
+                
+                completion(mark)
             }
         }
     }
@@ -88,30 +99,67 @@ class OfferRideViewController: UIViewController {
             }
             
             let route = response.routes[0]
-            self.mapView.add((route.polyline), level: MKOverlayLevel.aboveRoads)
+            self.mapView.add(route.polyline, level: MKOverlayLevel.aboveRoads)
             
             let rect = route.polyline.boundingMapRect
             self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
         }
     }
 
+    @IBAction func handleSubmit(_ sender: Any) {
+        guard let origin = originTextField.text, !origin.isEmpty else {
+            self.showSimpleAlert(title: "Origin cannot be empty!", message: "Please add an origin before adding a new ride!")
+            return
+        }
+        
+        guard let destination = destinationTextField.text, !destination.isEmpty else {
+            self.showSimpleAlert(title: "Destination cannot be empty!", message: "Please add a destination before adding a new ride!")
+            return
+        }
+        
+        self.createRide(origin: origin, destination: destination)
+    }
+    
+    fileprivate func createRide(origin: String, destination: String) {
+        guard let sourceCoordinate = self.sourceMark?.coordinate, let destinationCoordinate = self.destinationMark?.coordinate else {
+            self.showSimpleAlert(title: "Could not create ride", message: "Coordinated for source and/or destination could not be found.")
+            return
+        }
+        
+        let ride = NSEntityDescription.insertNewObject(forEntityName: "Ride", into: DataManager.shared.managedObjectContext) as! Ride
+        
+        ride.sourceName = origin
+        ride.destinationName = destination
+        ride.sourceCoordinate = sourceCoordinate
+        ride.destinationCoordinate = destinationCoordinate
+        ride.user = User.currentUser
+        
+        DataManager.shared.save()
+        
+        self.showSimpleAlert(title: "Ride created!", message: "The ride was succesfully created ;)")
+    }
 }
 
 extension OfferRideViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        drawPin(at: textField.text!) { [weak self] mark in
-            if mark != nil {
-                if textField === self?.originTextField {
-                    self?.sourceMark = mark!
-                } else if textField === self?.destinationTextField {
-                    self?.destinationMark = mark!
-                    self?.drawRoute()
-                }
+        drawPin(at: textField.text!) { (placemark) in
+            switch textField {
+            case self.originTextField:
+                self.sourceMark = placemark
+            case self.destinationTextField:
+                self.destinationMark = placemark
+            default:
+                break
+            }
+            
+            if self.sourceMark != nil && self.destinationMark != nil {
+                self.drawRoute()
             }
         }
         
         textField.resignFirstResponder()
+        
         return true
     }
     
@@ -122,7 +170,7 @@ extension OfferRideViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
         let renderer = MKPolylineRenderer(overlay: overlay)
         renderer.strokeColor = UIColor.red
-        renderer.lineWidth = 4.0
+        renderer.lineWidth = 2.0
         
         return renderer
     }

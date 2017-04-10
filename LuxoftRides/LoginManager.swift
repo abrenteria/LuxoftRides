@@ -12,21 +12,6 @@ import CoreData
 class LoginManager {
     static let shared = LoginManager()
     
-    var loggedInUser: User? {
-        if let userId = UserDefaults.standard.value(forKey: "user") as? String {
-            let fetchRequest = NSFetchRequest<User>(entityName: "User")
-            let predicate = NSPredicate(format: "identifier == %@", argumentArray: [userId])
-            
-            fetchRequest.predicate = predicate
-            
-            if let users = try? DataManager.shared.managedObjectContext.fetch(fetchRequest) {
-                return users.last!
-            }
-        }
-        
-        return nil
-    }
-    
     func login(email: String, password: String) -> Bool {
         guard let currentUser = self.findUser(email: email, password: password) else {
             return false
