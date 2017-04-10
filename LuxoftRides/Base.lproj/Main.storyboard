@@ -467,7 +467,7 @@
         <!--Offer Ride-->
         <scene sceneID="fXT-Zi-xIx">
             <objects>
-                <viewController title="Offer Ride" id="Y6H-Xh-M9M" customClass="OfferRideViewController" customModule="LuxoftRides" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OfferRideViewControllerId" title="Offer Ride" id="Y6H-Xh-M9M" customClass="OfferRideViewController" customModule="LuxoftRides" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fFG-jx-5E4"/>
                         <viewControllerLayoutGuide type="bottom" id="XLW-em-OlK"/>
