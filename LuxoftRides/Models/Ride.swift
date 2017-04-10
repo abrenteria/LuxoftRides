@@ -12,11 +12,23 @@ import CoreLocation
 
 class Ride: NSManagedObject {
     var sourceCoordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2DMake(self.sourceLatitude, self.sourceLongitude)
+        set {
+            self.sourceLatitude = newValue.latitude
+            self.sourceLongitude = newValue.longitude
+        }
+        get {
+            return CLLocationCoordinate2DMake(self.sourceLatitude, self.sourceLongitude)
+        }
     }
     
     var destinationCoordinate: CLLocationCoordinate2D {
-        return CLLocationCoordinate2DMake(self.destinationLatitude, self.destinationLongitude)
+        set {
+            self.destinationLatitude = newValue.latitude
+            self.destinationLongitude = newValue.longitude
+        }
+        get {
+            return CLLocationCoordinate2DMake(self.destinationLatitude, self.destinationLongitude)
+        }
     }
     
 }

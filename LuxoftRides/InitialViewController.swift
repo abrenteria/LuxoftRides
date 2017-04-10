@@ -31,7 +31,7 @@ class InitialViewController: UIViewController {
     }
     
     func handleLogin(_ sender: Timer) {
-        if let user = LoginManager.shared.loggedInUser {
+        if let user = User.currentUser {
             _ = LoginManager.shared.login(email: user.email!, password: user.password!)
             self.performSegue(withIdentifier: "showMain", sender: nil)
         } else {
