@@ -23,6 +23,16 @@ class OfferRideViewController: UIViewController {
     @IBOutlet weak var destinationTextField: UITextField!
     @IBOutlet weak var mapView: MKMapView!
 
+    fileprivate lazy var sourceAnnotation: MKPointAnnotation = {
+        return MKPointAnnotation()
+    }()
+    
+    fileprivate lazy var destinationAnnotation: MKPointAnnotation = {
+        return MKPointAnnotation()
+    }()
+    
+    fileprivate var currentOverlay: MKPolyline?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -52,12 +62,11 @@ class OfferRideViewController: UIViewController {
                     if self.sourceMark != nil {
                         self.mapView.removeAnnotation(self.sourceMark!)
                     }
-                    
                 case .destination:
                     if self.destinationMark != nil {
                         self.mapView.removeAnnotation(self.destinationMark!)
                     }
-                }
+                 }
                 
                 var region = self.mapView.region
                 let mark = MKPlacemark(placemark: placemark)
@@ -68,6 +77,20 @@ class OfferRideViewController: UIViewController {
                 
                 self.mapView.setRegion(region, animated: true)
                 self.mapView.addAnnotation(mark)
+                
+                // Remove existing annotation on update
+                /*switch type {
+                case .source:
+                    if self.sourceMark != nil {
+                        self.mapView.removeAnnotation(self.sourceMark!)
+                    }
+                    self.sourceMark = mark
+                case .destination:
+                    if self.destinationMark != nil {
+                        self.mapView.removeAnnotation(self.destinationMark!)
+                    }
+                    self.destinationMark = mark
+                }*/
                 
                 completion(mark)
             }
@@ -82,29 +105,21 @@ class OfferRideViewController: UIViewController {
     func drawRoute() {
         guard let sourcePlacemark = sourceMark, let destinationPlacemark = destinationMark else { return }
         
-        let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
-        let destinationMapItem = MKMapItem(placemark: destinationPlacemark)
-
-        let sourceAnnotation = MKPointAnnotation()
-        sourceAnnotation.title = "Source"
-        
-        if let location = sourcePlacemark.location {
-            sourceAnnotation.coordinate = location.coordinate
+        guard let sourceLocation = sourcePlacemark.location, let destinationLocation = destinationPlacemark.location else {
+            return
         }
         
+        self.sourceAnnotation.title = "Source"
+        self.sourceAnnotation.coordinate = sourceLocation.coordinate
         
-        let destinationAnnotation = MKPointAnnotation()
-        destinationAnnotation.title = "Destination"
-        
-        if let location = destinationPlacemark.location {
-            destinationAnnotation.coordinate = location.coordinate
-        }
+        self.destinationAnnotation.title = "Destination"
+        self.destinationAnnotation.coordinate = destinationLocation.coordinate
 
         self.mapView.showAnnotations([sourceAnnotation, destinationAnnotation], animated: true )
         
         let directionRequest = MKDirectionsRequest()
-        directionRequest.source = sourceMapItem
-        directionRequest.destination = destinationMapItem
+        directionRequest.source = MKMapItem(placemark: sourcePlacemark)
+        directionRequest.destination = MKMapItem(placemark: destinationPlacemark)
         directionRequest.transportType = .automobile
         
         // Calculate the direction
@@ -121,9 +136,15 @@ class OfferRideViewController: UIViewController {
             }
             
             let route = response.routes[0]
-            self.mapView.add(route.polyline, level: MKOverlayLevel.aboveRoads)
+            let newOverlay = route.polyline
+            self.mapView.add(newOverlay, level: MKOverlayLevel.aboveRoads)
             
-            let rect = route.polyline.boundingMapRect
+            if let oldOverlay = self.currentOverlay {
+                self.mapView.remove(oldOverlay)
+            }
+            self.currentOverlay = route.polyline
+            
+            let rect = newOverlay.boundingMapRect
             self.mapView.setRegion(MKCoordinateRegionForMapRect(rect), animated: true)
         }
     }
@@ -165,7 +186,7 @@ class OfferRideViewController: UIViewController {
 extension OfferRideViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        self.removePreviousRoute()
+        //self.removePreviousRoute()
         let type: MarkType = textField === originTextField ? .source : .destination
         
         drawPin(at: textField.text!, type: type) { (placemark) in
