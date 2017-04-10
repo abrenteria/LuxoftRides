@@ -25,7 +25,6 @@ class LoginViewController: UIViewController {
     }
     
     private func initialConfigurations() {
-        self.navigationController?.isNavigationBarHidden = true
         signInButton.layer.borderWidth = 1.0
         signInButton.layer.borderColor = UIColor.black.cgColor
         signInButton.layer.cornerRadius = 5.0
@@ -48,11 +47,10 @@ class LoginViewController: UIViewController {
             return
         }
         
-        if LoginManager.shared.login(email: email, password: password) == false {
-            self.showSimpleAlert(title: "Could not login!", message: "Please make sure you have registered and that your email and password is correct!")
+        if LoginManager.shared.login(email: email, password: password) {
+            self.dismiss(animated: true, completion: nil)
         } else {
-            let controller = AppDelegate.storyboard.instantiateViewController(withIdentifier: "MainViewController")
-            self.navigationController?.pushViewController(controller, animated: true)
+            self.showSimpleAlert(title: "Could not login!", message: "Please make sure you have registered and that your email and password is correct!")
         }
     }
     

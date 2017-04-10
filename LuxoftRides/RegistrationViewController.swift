@@ -74,8 +74,7 @@ class RegistrationViewController: UIViewController {
             newUser.avatarData = imageData as NSData
             
             if LoginManager.shared.login(email: email, password: password) {
-                let controller = AppDelegate.storyboard.instantiateViewController(withIdentifier: "MainViewController")
-                self.navigationController?.pushViewController(controller, animated: true)
+                self.dismiss(animated: true, completion: nil)
             } else {
                 self.showSimpleAlert(title: "Could not login", message: "Please try again later.") {
                     _ = self.navigationController?.popViewController(animated: true)
@@ -85,12 +84,11 @@ class RegistrationViewController: UIViewController {
             self.showSimpleAlert(title: "No Image Selected", message: "You must select an image before registering.")
         }
     }
-
-}
-
-extension RegistrationViewController: TTTAttributedLabelDelegate {
+    @IBAction func handleUpdateAvatar(_ sender: UITapGestureRecognizer) {
+        self.openImagePicker()
+    }
     
-    func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
+    fileprivate func openImagePicker() {
         if UIImagePickerController.isSourceTypeAvailable(.photoLibrary){
             imagePicker.delegate = self
             imagePicker.sourceType = .savedPhotosAlbum;
@@ -98,6 +96,13 @@ extension RegistrationViewController: TTTAttributedLabelDelegate {
             
             self.present(imagePicker, animated: true, completion: nil)
         }
+    }
+}
+
+extension RegistrationViewController: TTTAttributedLabelDelegate {
+    
+    func attributedLabel(_ label: TTTAttributedLabel!, didSelectLinkWith url: URL!) {
+        self.openImagePicker()
     }
     
 }
