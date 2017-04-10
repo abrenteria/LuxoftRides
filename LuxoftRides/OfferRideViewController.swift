@@ -10,6 +10,10 @@ import UIKit
 import MapKit
 import CoreData
 
+enum MarkType {
+    case source, destination
+}
+
 class OfferRideViewController: UIViewController {
     
     var sourceMark: MKPlacemark?
@@ -24,7 +28,7 @@ class OfferRideViewController: UIViewController {
 
     }
     
-    fileprivate func drawPin(at address: String, completion: @escaping (MKPlacemark?) -> Void) {
+    func drawPin(at address: String, type: MarkType, completion: @escaping (MKPlacemark?) -> Void) {
         let geocoder = CLGeocoder()
         
         geocoder.geocodeAddressString(address) { (placemarks, error) in
@@ -42,6 +46,19 @@ class OfferRideViewController: UIViewController {
                     return
                 }
                 
+                // Remove existing annotation on update
+                switch type {
+                case .source:
+                    if self.sourceMark != nil {
+                        self.mapView.removeAnnotation(self.sourceMark!)
+                    }
+                    
+                case .destination:
+                    if self.destinationMark != nil {
+                        self.mapView.removeAnnotation(self.destinationMark!)
+                    }
+                }
+                
                 var region = self.mapView.region
                 let mark = MKPlacemark(placemark: placemark)
                 
@@ -57,7 +74,12 @@ class OfferRideViewController: UIViewController {
         }
     }
     
-    fileprivate func drawRoute() {
+    func removePreviousRoute() {
+        let overlays = mapView.overlays
+        mapView.removeOverlays(overlays)
+    }
+    
+    func drawRoute() {
         guard let sourcePlacemark = sourceMark, let destinationPlacemark = destinationMark else { return }
         
         let sourceMapItem = MKMapItem(placemark: sourcePlacemark)
@@ -143,7 +165,10 @@ class OfferRideViewController: UIViewController {
 extension OfferRideViewController: UITextFieldDelegate {
 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        drawPin(at: textField.text!) { (placemark) in
+        self.removePreviousRoute()
+        let type: MarkType = textField === originTextField ? .source : .destination
+        
+        drawPin(at: textField.text!, type: type) { (placemark) in
             switch textField {
             case self.originTextField:
                 self.sourceMark = placemark

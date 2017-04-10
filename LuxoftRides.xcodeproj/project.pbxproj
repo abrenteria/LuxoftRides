@@ -29,6 +29,7 @@
 		C34413681E9744F9005833FE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34413671E9744F9005833FE /* LoginViewController.swift */; };
 		C36204BB1E97F2E9004E10F8 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */; };
 		C37AF7C81E981CD300838CE7 /* OfferRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37AF7C71E981CD300838CE7 /* OfferRideViewController.swift */; };
+		C3B7F5901E9BD52400853EF9 /* LuxoftRidesOfferRideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B7F58F1E9BD52400853EF9 /* LuxoftRidesOfferRideTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		C34413671E9744F9005833FE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C36204BA1E97F2E9004E10F8 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		C37AF7C71E981CD300838CE7 /* OfferRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OfferRideViewController.swift; sourceTree = "<group>"; };
+		C3B7F58F1E9BD52400853EF9 /* LuxoftRidesOfferRideTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LuxoftRidesOfferRideTests.swift; sourceTree = "<group>"; };
 		C7E7204B0B76587B11AB5698 /* Pods_LuxoftRidesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LuxoftRidesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -170,6 +172,7 @@
 				86D6696C1E96E35B0050AD84 /* LuxoftRidesTests.swift */,
 				86D669991E982F8E0050AD84 /* LuxoftRidesLoginTests.swift */,
 				86D6699B1E9834A40050AD84 /* LuxoftRidesRegistrationTests.swift */,
+				C3B7F58F1E9BD52400853EF9 /* LuxoftRidesOfferRideTests.swift */,
 				86D6696E1E96E35B0050AD84 /* Info.plist */,
 			);
 			path = LuxoftRidesTests;
@@ -525,6 +528,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3B7F5901E9BD52400853EF9 /* LuxoftRidesOfferRideTests.swift in Sources */,
 				86D6699C1E9834A40050AD84 /* LuxoftRidesRegistrationTests.swift in Sources */,
 				86D6696D1E96E35B0050AD84 /* LuxoftRidesTests.swift in Sources */,
 				86D6699A1E982F8E0050AD84 /* LuxoftRidesLoginTests.swift in Sources */,
